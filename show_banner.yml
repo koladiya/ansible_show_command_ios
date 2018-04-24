@@ -22,9 +22,13 @@
   - debug: var=banner.stdout_lines
   - local_action: copy content="{{banner.stdout_lines}}" dest=/etc/kamlesh_test/test.txt
   
-  - name: git push 
-    command: 
-      - chdir /etc/kamlesh_test
-      - git add test.txt
-      - git commit -m "results"
-      - git push master origin
+
+  - name: check version
+    shell: |
+      ansible --version
+      cd /etc/kamlesh_test
+      ls
+      git add test.txt
+      git commit -m "results"
+      git push origin master
+    delegate_to: localhost
