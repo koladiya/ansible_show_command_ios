@@ -1,5 +1,5 @@
 ---
-- hosts: switch1
+- hosts: new
   gather_facts: no
   connection: local
 
