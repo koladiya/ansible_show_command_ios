@@ -31,4 +31,4 @@
       git add test.txt
       git commit -m "results"
       git push origin master
-    #delegate_to: localhost
+    delegate_to: localhost
