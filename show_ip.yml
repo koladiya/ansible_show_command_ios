@@ -19,7 +19,6 @@
   #    state: present
   #    validate_certs: False
 
-
   - name: Reading catalyst...
     ios_command:
       provider: "{{ provider }}"
