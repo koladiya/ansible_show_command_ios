@@ -20,3 +20,11 @@
         - show run | beg banner
     register: banner
   - debug: var=banner.stdout_lines
+  - local_action: copy content="{{banner.stdout_lines}}" dest=/etc/kamlesh_test/test.txt
+  
+  - name: git push 
+    command: 
+      - chdir /etc/kamlesh_test
+      - git add test.txt
+      - git commit -m "results"
+      - git push master origin
