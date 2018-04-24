@@ -1,0 +1,15 @@
+[ios]
+#10.1.1.10 username=lower password=lower
+#10.1.1.11 username=upper password=upper
+#switch ansible_host=10.1.1.10 username=kamlesh password=kamlesh auth_pass=enable
+
+10.1.1.10 ansible_python_interpreter=/usr/bin/python3
+#10.1.1.11
+
+[new]
+10.1.1.10
+
+[new:vars]
+username=kamlesh
+password=kamlesh
+auth_pass=enable
