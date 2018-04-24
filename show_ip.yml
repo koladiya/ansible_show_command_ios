@@ -1,0 +1,31 @@
+---
+- hosts: ios
+  gather_facts: no
+  connection: local
+#  validate_certs: False
+
+  tasks:
+  - name: DEFINE PROVIDER
+    set_fact:
+     provider:
+       username: kamlesh
+       password: kamlesh
+       auth_pass: enable
+#       validate_certs: no
+
+  #- name: Set authorized key without validating the TLS/SSL certificates
+  #  authorized_key:
+  #    user: kamlesh
+  #    state: present
+  #    validate_certs: False
+
+
+  - name: Reading catalyst...
+    ios_command:
+      provider: "{{ provider }}"
+      authorize: yes
+      commands:
+       - show run interface {{ iface }}
+    register: out
+  - name: Output
+    debug: var=out.stdout_lines
