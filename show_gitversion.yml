@@ -1,0 +1,9 @@
+- name: Get installed version.
+  command: >
+    git --version
+    warn=no
+  changed_when: false
+  failed_when: false
+  check_mode: no
+  register: git_installed_version
+- debug: var=git_installed_version.stdout_lines
