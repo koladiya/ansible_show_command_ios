@@ -3,7 +3,6 @@
   gather_facts: no
   connection: local
 
-
   tasks:
   - name: DEFINE PROVIDER
     set_fact:
