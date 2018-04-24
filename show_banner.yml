@@ -19,7 +19,7 @@
       provider: "{{ provider }}"
       authorize: yes
       commands:
-        - hostname kkk
-        #- show run | beg banner
+        #- hostname kkk
+        - show run | beg banner
     register: banner
   - debug: var=banner.stdout_lines
