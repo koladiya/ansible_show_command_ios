@@ -12,8 +12,7 @@
        password: "{{ password }}"
        auth_pass: "{{ auth_pass }}"
 
-
-  - name: SHOW RUN | BEG BANNER
+  - name: SHOW RUN | BEG BANNER #show banner
     ios_command:
       provider: "{{ provider }}"
       authorize: yes
