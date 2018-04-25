@@ -11,7 +11,7 @@
        host: "{{ ansible_host }}"
        username: "{{ username }}"
        password: "{{ password }}"
-       auth_pass: "{{ auth_pass }}
+       auth_pass: "{{ auth_pass }}"
        
   - name: Reading catalyst...
     ios_command:
