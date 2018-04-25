@@ -8,9 +8,10 @@
   - name: DEFINE PROVIDER
     set_fact:
      provider:
-       username: kamlesh
-       password: kamlesh
-       auth_pass: enable
+       host: "{{ ansible_host }}"
+       username: "{{ username }}"
+       password: "{{ password }}"
+       auth_pass: "{{ auth_pass }}
 #       validate_certs: no
 
   #- name: Set authorized key without validating the TLS/SSL certificates
