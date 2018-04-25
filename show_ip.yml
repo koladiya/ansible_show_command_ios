@@ -22,7 +22,7 @@
 
   - name: Reading catalyst...
     ios_command:
-      provider: "{{ provider }}"
+     provider: "{{ provider }}"
       authorize: yes
       commands:
        - show run interface {{ iface }}
