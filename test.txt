@@ -1,1 +1,1 @@
-[["banner motd ^C this is ******** switch 2 172.16.10.65 ^C", "!", "line con 0", "line vty 0 4", " login local", " transport input ssh", "line vty 5 15", " login local", " transport input ssh", "!", "ntp authenticate", "end"]]
+[["banner motd ^C this is ******** switch 172.16.10.64 ^C", "!", "line con 0", "line vty 0 4", " login local", " transport input ssh", "line vty 5 15", " login local", " transport input ssh", "!", "ntp master", "end"]]
