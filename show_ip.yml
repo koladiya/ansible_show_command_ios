@@ -12,13 +12,6 @@
        username: "{{ username }}"
        password: "{{ password }}"
        auth_pass: "{{ auth_pass }}
-#       validate_certs: no
-
-  #- name: Set authorized key without validating the TLS/SSL certificates
-  #  authorized_key:
-  #    user: kamlesh
-  #    state: present
-  #    validate_certs: False
 
   - name: Reading catalyst...
     ios_command:
@@ -26,6 +19,6 @@
       authorize: yes
       commands:
        - show run interface {{ iface }}
-    register: out
+    register: out 
   - name: Output
     debug: var=out.stdout_lines
